@@ -1,8 +1,8 @@
-import {people} from "./db";
+import {getMovies} from "./db";
 
 const resolvers = {
     Query: {
-       people: () => people
+       movies: (_, { limit, rating }) => getMovies(limit, rating)
     }
 };
 
